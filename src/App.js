@@ -29,10 +29,10 @@ function App() {
         <ul>
           {items.map((todoItem, index) => (
             <ToDoItem
-              key={index}
+              key={index} // This line should be corrected
               id={index}
               text={todoItem}
-              onChecked={deleteItem}
+              onChecked={() => deleteItem(index)} // Pass the correct id
             />
           ))}
         </ul>
